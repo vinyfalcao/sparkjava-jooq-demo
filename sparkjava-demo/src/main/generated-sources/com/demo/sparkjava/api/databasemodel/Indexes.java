@@ -14,7 +14,7 @@ import org.jooq.impl.AbstractKeys;
 
 
 /**
- * A class modelling indexes of tables of the <code>store</code> schema.
+ * A class modelling indexes of tables of the <code>public</code> schema.
  */
 @Generated(
     value = {

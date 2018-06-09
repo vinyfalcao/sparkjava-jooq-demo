@@ -27,7 +27,7 @@ import org.jooq.impl.CatalogImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DefaultCatalog extends CatalogImpl {
 
-    private static final long serialVersionUID = -853516535;
+    private static final long serialVersionUID = -277639173;
 
     /**
      * The reference instance of <code></code>
@@ -35,9 +35,9 @@ public class DefaultCatalog extends CatalogImpl {
     public static final DefaultCatalog DEFAULT_CATALOG = new DefaultCatalog();
 
     /**
-     * The schema <code>store</code>.
+     * The schema <code>public</code>.
      */
-    public final Store STORE = com.demo.sparkjava.api.databasemodel.Store.STORE;
+    public final Public PUBLIC = com.demo.sparkjava.api.databasemodel.Public.PUBLIC;
 
     /**
      * No further instances allowed
@@ -55,6 +55,6 @@ public class DefaultCatalog extends CatalogImpl {
 
     private final List<Schema> getSchemas0() {
         return Arrays.<Schema>asList(
-            Store.STORE);
+            Public.PUBLIC);
     }
 }

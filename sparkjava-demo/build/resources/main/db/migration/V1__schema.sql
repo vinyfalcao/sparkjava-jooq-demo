@@ -4,4 +4,4 @@ name VARCHAR(200)
 );
 INSERT INTO STORE
 VALUES
-('asddasdasads', 'asddasads');
+('3fbdb44f-d3ce-4a52-9a4b-fab824cb309c', 'Your Store');

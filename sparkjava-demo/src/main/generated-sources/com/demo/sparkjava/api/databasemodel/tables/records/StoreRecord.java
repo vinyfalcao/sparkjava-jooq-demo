@@ -27,10 +27,10 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class StoreRecord extends TableRecordImpl<StoreRecord> implements Record2<String, String> {
 
-    private static final long serialVersionUID = -2134734974;
+    private static final long serialVersionUID = 602733292;
 
     /**
-     * Setter for <code>store.store.uuid</code>.
+     * Setter for <code>public.store.uuid</code>.
      */
     public StoreRecord setUuid(String value) {
         set(0, value);
@@ -38,14 +38,14 @@ public class StoreRecord extends TableRecordImpl<StoreRecord> implements Record2
     }
 
     /**
-     * Getter for <code>store.store.uuid</code>.
+     * Getter for <code>public.store.uuid</code>.
      */
     public String getUuid() {
         return (String) get(0);
     }
 
     /**
-     * Setter for <code>store.store.name</code>.
+     * Setter for <code>public.store.name</code>.
      */
     public StoreRecord setName(String value) {
         set(1, value);
@@ -53,7 +53,7 @@ public class StoreRecord extends TableRecordImpl<StoreRecord> implements Record2
     }
 
     /**
-     * Getter for <code>store.store.name</code>.
+     * Getter for <code>public.store.name</code>.
      */
     public String getName() {
         return (String) get(1);
@@ -84,7 +84,7 @@ public class StoreRecord extends TableRecordImpl<StoreRecord> implements Record2
      */
     @Override
     public Field<String> field1() {
-        return Store.STORE_.UUID;
+        return Store.STORE.UUID;
     }
 
     /**
@@ -92,7 +92,7 @@ public class StoreRecord extends TableRecordImpl<StoreRecord> implements Record2
      */
     @Override
     public Field<String> field2() {
-        return Store.STORE_.NAME;
+        return Store.STORE.NAME;
     }
 
     /**
@@ -163,14 +163,14 @@ public class StoreRecord extends TableRecordImpl<StoreRecord> implements Record2
      * Create a detached StoreRecord
      */
     public StoreRecord() {
-        super(Store.STORE_);
+        super(Store.STORE);
     }
 
     /**
      * Create a detached, initialised StoreRecord
      */
     public StoreRecord(String uuid, String name) {
-        super(Store.STORE_);
+        super(Store.STORE);
 
         set(0, uuid);
         set(1, name);

@@ -11,7 +11,7 @@ import javax.annotation.Generated;
 
 
 /**
- * Convenience access to all tables in store
+ * Convenience access to all tables in public
  */
 @Generated(
     value = {
@@ -24,12 +24,12 @@ import javax.annotation.Generated;
 public class Tables {
 
     /**
-     * The table <code>store.schema_version</code>.
+     * The table <code>public.schema_version</code>.
      */
     public static final SchemaVersion SCHEMA_VERSION = com.demo.sparkjava.api.databasemodel.tables.SchemaVersion.SCHEMA_VERSION;
 
     /**
-     * The table <code>store.store</code>.
+     * The table <code>public.store</code>.
      */
-    public static final Store STORE_ = com.demo.sparkjava.api.databasemodel.tables.Store.STORE_;
+    public static final Store STORE = com.demo.sparkjava.api.databasemodel.tables.Store.STORE;
 }

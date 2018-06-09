@@ -1,6 +1,7 @@
 package com.demo.sparkjava.api.config;
 
 import com.demo.sparkjava.api.Application;
+import com.demo.sparkjava.api.store.service.StoreService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
@@ -11,6 +12,7 @@ public class GuiceModule extends AbstractModule {
 	@Override
 	protected void configure() {
 		bind(Application.class).in(Singleton.class);
+		bind(StoreService.class).in(Singleton.class);
 	}
 
 	@Provides

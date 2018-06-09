@@ -4,6 +4,7 @@
 package com.demo.sparkjava.api.databasemodel.tables;
 
 
+import com.demo.sparkjava.api.databasemodel.Public;
 import com.demo.sparkjava.api.databasemodel.tables.records.StoreRecord;
 
 import javax.annotation.Generated;
@@ -30,12 +31,12 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Store extends TableImpl<StoreRecord> {
 
-    private static final long serialVersionUID = 64346965;
+    private static final long serialVersionUID = -1528411937;
 
     /**
-     * The reference instance of <code>store.store</code>
+     * The reference instance of <code>public.store</code>
      */
-    public static final Store STORE_ = new Store();
+    public static final Store STORE = new Store();
 
     /**
      * The class holding records for this type
@@ -46,34 +47,34 @@ public class Store extends TableImpl<StoreRecord> {
     }
 
     /**
-     * The column <code>store.store.uuid</code>.
+     * The column <code>public.store.uuid</code>.
      */
     public final TableField<StoreRecord, String> UUID = createField("uuid", org.jooq.impl.SQLDataType.VARCHAR(36), this, "");
 
     /**
-     * The column <code>store.store.name</code>.
+     * The column <code>public.store.name</code>.
      */
     public final TableField<StoreRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR(200), this, "");
 
     /**
-     * Create a <code>store.store</code> table reference
+     * Create a <code>public.store</code> table reference
      */
     public Store() {
         this(DSL.name("store"), null);
     }
 
     /**
-     * Create an aliased <code>store.store</code> table reference
+     * Create an aliased <code>public.store</code> table reference
      */
     public Store(String alias) {
-        this(DSL.name(alias), STORE_);
+        this(DSL.name(alias), STORE);
     }
 
     /**
-     * Create an aliased <code>store.store</code> table reference
+     * Create an aliased <code>public.store</code> table reference
      */
     public Store(Name alias) {
-        this(alias, STORE_);
+        this(alias, STORE);
     }
 
     private Store(Name alias, Table<StoreRecord> aliased) {
@@ -89,7 +90,7 @@ public class Store extends TableImpl<StoreRecord> {
      */
     @Override
     public Schema getSchema() {
-        return com.demo.sparkjava.api.databasemodel.Store.STORE;
+        return Public.PUBLIC;
     }
 
     /**

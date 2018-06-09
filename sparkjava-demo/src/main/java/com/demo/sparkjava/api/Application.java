@@ -1,6 +1,7 @@
 package com.demo.sparkjava.api;
 
 import com.demo.sparkjava.api.config.GuiceModule;
+import com.demo.sparkjava.api.config.JooqPersistenceModule;
 import com.demo.sparkjava.api.controller.store.StoreController;
 import com.google.inject.Guice;
 import com.google.inject.Inject;
@@ -18,7 +19,7 @@ public class Application {
 	}
 
 	public static void main(String[] args) {
-		Guice.createInjector(new GuiceModule()).getInstance(Application.class).run(9999);
+		Guice.createInjector(new GuiceModule(), new JooqPersistenceModule()).getInstance(Application.class).run(9999);
 	}
 
 }
