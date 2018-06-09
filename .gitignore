@@ -1,1 +1,8 @@
 /.gradle/
+/gradle/
+/build/
+/bin/
+.classpath
+.settings
+*generated-sources*
+.git
