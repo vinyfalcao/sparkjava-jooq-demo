@@ -10,4 +10,12 @@ public interface StoreDAO {
 
 	List<Store> findAll();
 
+	List<Store> findByName(String name);
+	
+	Store findByUuid(String uuid);
+	
+	Store save(Store store);
+	
+	void delete(String uuid);
+	
 }

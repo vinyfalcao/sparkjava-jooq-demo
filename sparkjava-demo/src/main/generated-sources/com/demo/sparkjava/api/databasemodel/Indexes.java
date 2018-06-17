@@ -5,6 +5,7 @@ package com.demo.sparkjava.api.databasemodel;
 
 
 import com.demo.sparkjava.api.databasemodel.tables.SchemaVersion;
+import com.demo.sparkjava.api.databasemodel.tables.Store;
 
 import javax.annotation.Generated;
 
@@ -34,6 +35,7 @@ public class Indexes {
     public static final Index SCHEMA_VERSION_PK = Indexes0.SCHEMA_VERSION_PK;
     public static final Index SCHEMA_VERSION_S_IDX = Indexes0.SCHEMA_VERSION_S_IDX;
     public static final Index SCHEMA_VERSION_VR_IDX = Indexes0.SCHEMA_VERSION_VR_IDX;
+    public static final Index STORE_PKEY = Indexes0.STORE_PKEY;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -44,5 +46,6 @@ public class Indexes {
         public static Index SCHEMA_VERSION_PK = createIndex("schema_version_pk", SchemaVersion.SCHEMA_VERSION, new OrderField[] { SchemaVersion.SCHEMA_VERSION.VERSION }, true);
         public static Index SCHEMA_VERSION_S_IDX = createIndex("schema_version_s_idx", SchemaVersion.SCHEMA_VERSION, new OrderField[] { SchemaVersion.SCHEMA_VERSION.SUCCESS }, false);
         public static Index SCHEMA_VERSION_VR_IDX = createIndex("schema_version_vr_idx", SchemaVersion.SCHEMA_VERSION, new OrderField[] { SchemaVersion.SCHEMA_VERSION.VERSION_RANK }, false);
+        public static Index STORE_PKEY = createIndex("store_pkey", Store.STORE, new OrderField[] { Store.STORE.UUID }, true);
     }
 }

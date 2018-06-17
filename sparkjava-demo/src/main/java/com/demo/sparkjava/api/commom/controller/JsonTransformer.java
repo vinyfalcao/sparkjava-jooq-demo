@@ -1,4 +1,4 @@
-package com.demo.sparkjava.api.controller.store;
+package com.demo.sparkjava.api.commom.controller	;
 
 import com.google.gson.Gson;
 

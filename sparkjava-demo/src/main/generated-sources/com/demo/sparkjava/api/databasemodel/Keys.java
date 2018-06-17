@@ -5,7 +5,9 @@ package com.demo.sparkjava.api.databasemodel;
 
 
 import com.demo.sparkjava.api.databasemodel.tables.SchemaVersion;
+import com.demo.sparkjava.api.databasemodel.tables.Store;
 import com.demo.sparkjava.api.databasemodel.tables.records.SchemaVersionRecord;
+import com.demo.sparkjava.api.databasemodel.tables.records.StoreRecord;
 
 import javax.annotation.Generated;
 
@@ -37,6 +39,7 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     public static final UniqueKey<SchemaVersionRecord> SCHEMA_VERSION_PK = UniqueKeys0.SCHEMA_VERSION_PK;
+    public static final UniqueKey<StoreRecord> STORE_PKEY = UniqueKeys0.STORE_PKEY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
@@ -49,5 +52,6 @@ public class Keys {
 
     private static class UniqueKeys0 extends AbstractKeys {
         public static final UniqueKey<SchemaVersionRecord> SCHEMA_VERSION_PK = createUniqueKey(SchemaVersion.SCHEMA_VERSION, "schema_version_pk", SchemaVersion.SCHEMA_VERSION.VERSION);
+        public static final UniqueKey<StoreRecord> STORE_PKEY = createUniqueKey(Store.STORE, "store_pkey", Store.STORE.UUID);
     }
 }

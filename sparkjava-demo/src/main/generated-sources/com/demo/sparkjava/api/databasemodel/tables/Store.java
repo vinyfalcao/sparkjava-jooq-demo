@@ -4,16 +4,23 @@
 package com.demo.sparkjava.api.databasemodel.tables;
 
 
+import com.demo.sparkjava.api.databasemodel.Indexes;
+import com.demo.sparkjava.api.databasemodel.Keys;
 import com.demo.sparkjava.api.databasemodel.Public;
 import com.demo.sparkjava.api.databasemodel.tables.records.StoreRecord;
+
+import java.util.Arrays;
+import java.util.List;
 
 import javax.annotation.Generated;
 
 import org.jooq.Field;
+import org.jooq.Index;
 import org.jooq.Name;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
+import org.jooq.UniqueKey;
 import org.jooq.impl.DSL;
 import org.jooq.impl.TableImpl;
 
@@ -31,7 +38,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Store extends TableImpl<StoreRecord> {
 
-    private static final long serialVersionUID = -1528411937;
+    private static final long serialVersionUID = 1970904876;
 
     /**
      * The reference instance of <code>public.store</code>
@@ -49,7 +56,7 @@ public class Store extends TableImpl<StoreRecord> {
     /**
      * The column <code>public.store.uuid</code>.
      */
-    public final TableField<StoreRecord, String> UUID = createField("uuid", org.jooq.impl.SQLDataType.VARCHAR(36), this, "");
+    public final TableField<StoreRecord, String> UUID = createField("uuid", org.jooq.impl.SQLDataType.VARCHAR(36).nullable(false), this, "");
 
     /**
      * The column <code>public.store.name</code>.
@@ -91,6 +98,30 @@ public class Store extends TableImpl<StoreRecord> {
     @Override
     public Schema getSchema() {
         return Public.PUBLIC;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Index> getIndexes() {
+        return Arrays.<Index>asList(Indexes.STORE_PKEY);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public UniqueKey<StoreRecord> getPrimaryKey() {
+        return Keys.STORE_PKEY;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<UniqueKey<StoreRecord>> getKeys() {
+        return Arrays.<UniqueKey<StoreRecord>>asList(Keys.STORE_PKEY);
     }
 
     /**

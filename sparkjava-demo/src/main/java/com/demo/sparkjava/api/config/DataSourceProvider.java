@@ -13,7 +13,7 @@ public class DataSourceProvider implements Provider<DataSource> {
 	public DataSource get() {
 		Properties p = new Properties();
         try {
-			p.load(DataSourceProvider.class.getResourceAsStream("/application.properties"));
+			p.load(DataSourceProvider.class.getResourceAsStream("/application_test.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

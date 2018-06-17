@@ -23,4 +23,24 @@ public class StoreServiceImp implements StoreService {
 		return storeDAO.findAll();
 	}
 
+	@Override
+	public List<Store> findByName(String name) {
+		return storeDAO.findByName(name);
+	}
+
+	@Override
+	public Store findByUuid(String uuid) {
+		return storeDAO.findByUuid(uuid);
+	}
+
+	@Override
+	public Store save(Store store) {
+		return storeDAO.save(store);
+	}
+
+	@Override
+	public void delete(String uuid) {
+		storeDAO.delete(uuid);
+	}
+
 }
